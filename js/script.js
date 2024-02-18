@@ -1,4 +1,5 @@
-alert('Hello World');
+let favouriteFood = stake;
+document.write(favouriteFood);
 //single line comment
 
 /* This is a longer comment.
