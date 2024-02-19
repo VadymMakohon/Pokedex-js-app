@@ -6,3 +6,4 @@ document.write (favoriteFood);
 
 /* This is a longer comment.
 Example of how to use a comment over multiple lines. */
+
