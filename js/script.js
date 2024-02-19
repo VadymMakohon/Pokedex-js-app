@@ -1,8 +1,24 @@
-alert('Hello world');
+// Create a new variable called pokemonList and assign a blank array to it
+let pokemonList = [];
 
-let favoriteFood = "stake";
-document.write (favoriteFood);
-//single line comment
+// Add Pokémon objects (at list 3) to the array
+{
+  name: "Venusaur",
+  height: 7,
+  types: ['grass', 'poison']
+};
 
-/* This is a longer comment.
-Example of how to use a comment over multiple lines. */
+{
+  name: "Charmander",
+  height: 6,
+  types: ['fire']
+};
+
+{
+  name: "Squirtle",
+  height: 5,
+  types: ['water']
+};
+
+// Display the pokemonList array
+console.log(pokemonList);
