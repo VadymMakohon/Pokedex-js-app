@@ -1,25 +1,31 @@
-// describtions of pokemon lists
+// scripts.js
+// created new pokemonRepository variable
 
-let pokemonList = [
-  {
-    name: "Venusaur",
-    height: 7,
-    types: ['grass', 'poison']
-  },
-  {
-    name: "Charmander",
-    height: 6,
-    types: ['fire']
-  },
-  {
-    name: "Squirtle",
-    height: 5,
-    types: ['water']
+let pokemonRepository = (function() {
+  let pokemonList = [
+    { name: "Venusaur", height: 7, types: ['grass', 'poison']},
+    { name: "Charmander", height: 6, types: ['fire']},
+    { name: "Squirtle", height: 5, types: ['water']}
+  ];
+
+  // Public functions
+  function getAll() {
+    return pokemonList;
   }
-];
 
-// print the list of names from pokemonList and corresponding height of that name using forEach()
-pokemonList.forEach(function(pokemon) {
+  function add(item) {
+    pokemonList.push(item);
+  }
+
+  // Return an object with public functions
+  return {
+    getAll,
+    add
+  };
+})();
+
+// forEach loop to iterate over each Pokémon in the repository
+pokemonRepository.getAll().forEach(function(pokemon) {
   document.write(pokemon.name + ' (height: ' + pokemon.height + ') ');
 
   if (pokemon.height > 5) {
