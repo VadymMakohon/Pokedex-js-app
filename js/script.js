@@ -1,6 +1,3 @@
-// scripts.js
-// created new pokemonRepository variable
-
 let pokemonRepository = (function () {
   let repository = [
     { name: "Venusaur", height: 7, types: ["grass", "poison"] },
@@ -21,10 +18,12 @@ let pokemonRepository = (function () {
       console.log("pokemon is not correct");
     }
   }
+
   // Public functions
   function getAll() {
     return repository;
   }
+
   function addListItem(pokemon) {
     let pokemonList = document.querySelector(".pokemon-list");
     let listpokemon = document.createElement("li");
@@ -33,7 +32,16 @@ let pokemonRepository = (function () {
     button.classList.add("button-class");
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
+    // Add event listener to the button
+    button.addEventListener("click", () => {
+      showDetails(pokemon);
+    });
   }
+
+  function showDetails(pokemon) {
+    console.log("Pokemon Details:", pokemon);
+  }
+
   return {
     add: add,
     getAll: getAll,
