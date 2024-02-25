@@ -9,7 +9,12 @@
 <body>
   <h1>Pokedex</h1>
   <p>List of pokemon stats</p>
-  <div class="pokemon-list"></div>
-  <script src="./js/script.js"></script>
+  <div id="loadingMessage" style="display: none;">Loading...</div>
+  <ul class="pokemon-list"></ul>
+  <strong>
+    <script src="./js/promise-polyfill.js"></script>
+    <script src="./js/fetch-polyfill.js"></script>
+    <script src="./js/script.js"></script>
+  </strong>
 </body>
 </html>
