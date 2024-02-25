@@ -25,3 +25,15 @@ p {
   transition-duration: 0.4s;
   cursor: pointer;
 }
+
+/* Centered image styles */
+.icon-container {
+  text-align: center;
+  padding-top: 20px; /* Adjust as needed */
+}
+
+.icon-container img {
+  width: 400px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  display: inline-block;
+}
