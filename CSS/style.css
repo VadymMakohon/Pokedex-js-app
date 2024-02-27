@@ -1,14 +1,15 @@
-  .container {
+.container {
   margin: auto;
   width: 50%;
   padding: 20px;
   text-align: center;
-  }
-  #modal-container {
-  display: none;
-  }
+}
 
-  #modal-container.is-visible {
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
   position: fixed;
   padding: 20px;
   box-sizing: border-box;
@@ -17,9 +18,9 @@
   overflow: auto;
   display: grid;
   text-align: center;
-  }
-  
-  .button-class {
+}
+
+.button-class {
   display: block;
   width: 90%;
   border: none;
@@ -30,13 +31,24 @@
   cursor: pointer;
   border: 1px solid #500B95;
   border-radius: 150px;
-  }
-  
-  .button-class:hover {
+}
+
+.button-class:hover {
   background-color: #ddd;
   color: black;
-  }
-  
-  .pokemon-list {
+}
+
+.pokemon-list {
   list-style-type: none;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 80%;
   }
+
+  .button-class {
+    width: 100%;
+  }
+}
