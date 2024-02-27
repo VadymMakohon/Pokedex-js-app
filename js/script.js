@@ -1,6 +1,4 @@
-let modalContainer = document.createElement('div');
-modalContainer.classList.add('modal-container');
-document.body.appendChild(modalContainer);
+let modalContainer = document.querySelector('#modal-container');
 
 let pokemonRepository = (function () {
   let pokemonList = [];
@@ -71,6 +69,8 @@ let pokemonRepository = (function () {
 
   function openModal(pokemon) {
     modalContainer.innerHTML = '';
+
+    modalContainer.classList.add('is-visible');
 
     let modal = document.createElement('div');
     modal.classList.add('modal');
