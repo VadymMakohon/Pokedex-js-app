@@ -1,4 +1,4 @@
-Pokemon App
+simple-js-app
 
 The provided JavaScript code constitutes a web application for a Pokédex. 
 This program utilizes an API to fetch comprehensive information about Pokémon, including a list of Pokémon and their specific details, and dynamically presents this data on a webpage. 
