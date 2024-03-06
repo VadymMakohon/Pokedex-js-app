@@ -1,4 +1,4 @@
-simple-js-app
+# simple-js-app
 
 The provided code constitutes a JavaScript program designed for the development of a web application known as a Pokédex. This application leverages an API (as indicated below) to retrieve a comprehensive list of Pokémon along with their details, subsequently presenting them on a designated web page. The script establishes an Immediately Invoked Function Expression (IIFE) named `pokemonRepository()`, encapsulating the Pokémon list and offering methods for adding new Pokémon, retrieving the entire list, and fetching Pokémon details from the API.
 
