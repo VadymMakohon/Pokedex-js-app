@@ -7,8 +7,7 @@ Within the code, the `addListItem()` method dynamically generates a Pokémon lis
 Lastly, the `showDetails()` method showcases the details of a selected Pokémon in a modal, a component from the Bootstrap framework, triggered by clicking the respective button. This modal encompasses crucial Pokémon information, including the image, name, height, and type.
 
 In essence, this JavaScript code employs various web technologies, including HTML, JS, jQuery, CSS, and Bootstrap components, to construct an engaging and dynamic web application, enabling users to explore and view details for different Pokémon.
-
-To initiate the project:
 The application utilizes HTML, JS, jQuery, CSS, and relies on Bootstrap components.
 
-![preview](https://github.com/VadymMakohon/simple-js-app/assets/138728243/a69eb81b-c3cc-490c-ad5f-6edf1bb93510)
+![preview](https://github.com/VadymMakohon/simple-js-app/assets/138728243/91eb6338-0265-4bfe-b8f9-9dd81f676feb)
+
