@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=42";
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
 
   function getAll() {
     return pokemonList;
@@ -47,7 +47,7 @@ let pokemonRepository = (function () {
         json.results.forEach(function (item) {
           let pokemon = {
             name: item.name,
-            detailsUrl: item.url
+            detailsUrl: item.url,
           };
           add(pokemon);
         });
@@ -64,7 +64,7 @@ let pokemonRepository = (function () {
         return response.json();
       })
       .then(function (details) {
-        // Details we want to add
+        // Details i want to add
         item.imageUrlFront = details.sprites.front_default;
         item.imageUrlBack = details.sprites.back_default;
         item.types = details.types;
@@ -119,8 +119,8 @@ let pokemonRepository = (function () {
     let heightElement = document.createElement("p");
     heightElement.innerHTML = "Height: " + pokemon.height;
 
-    let weigthElement = document.createElement("p");
-    weigthElement.innerHTML = "Weigth: " + pokemon.weight;
+    let weightElement = document.createElement("p");
+    weightElement.innerHTML = "Weight: " + pokemon.weight;
 
     let abilities = document.createElement("p");
     let abilitiesList = [pokemon.abilities[0].ability.name];
@@ -135,7 +135,7 @@ let pokemonRepository = (function () {
     modalBody.appendChild(imageBack);
     modalBody.appendChild(typesElement);
     modalBody.appendChild(heightElement);
-    modalBody.appendChild(weigthElement);
+    modalBody.appendChild(weightElement);
     modalBody.appendChild(abilities);
   }
 
@@ -155,12 +155,37 @@ let pokemonRepository = (function () {
     }
   });
 
+
+  // Event listener for the search button
+  document.getElementById('searchButton').addEventListener('click', function () {
+    // Get the value from the search input
+    var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+    // Filter Pokémon list based on the search term
+    var filteredPokemon = pokemonRepository.getAll().filter(function (pokemon) {
+      return pokemon.name.toLowerCase().includes(searchTerm);
+    });
+
+    // Clear the existing Pokémon list
+    clearPokemonList();
+
+    // Display the filtered Pokémon list
+    filteredPokemon.forEach(function (pokemon) {
+      pokemonRepository.addListItem(pokemon);
+    });
+  });
+
+  function clearPokemonList() {
+    var pokemonList = document.querySelector('.pokemon-list');
+    pokemonList.innerHTML = '';
+  }
+  
   return {
     getAll: getAll,
     add: add,
     addListItem: addListItem,
     loadList: loadList,
-    loadDetails: loadDetails
+    loadDetails: loadDetails,
   };
 })();
 
