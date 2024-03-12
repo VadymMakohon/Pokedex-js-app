@@ -61,12 +61,22 @@
     document.getElementById('searchButton').addEventListener('click', function () {
       // Get the value from the search input
       var searchTerm = document.getElementById('searchInput').value.toLowerCase();
-
-      // Your search logic goes here
-
-      console.log('Search Term:', searchTerm);
+  
+      // Filter Pokémon list based on the search term
+      var filteredPokemon = pokemonRepository.getAll().filter(function (pokemon) {
+        return pokemon.name.toLowerCase().includes(searchTerm);
+      });
+  
+      // Clear the existing Pokémon list
+      clearPokemonList();
+  
+      // Display the filtered Pokémon list
+      filteredPokemon.forEach(function (pokemon) {
+        pokemonRepository.addListItem(pokemon);
+      });
     });
   </script>
+  
 </body>
 
 </html>
