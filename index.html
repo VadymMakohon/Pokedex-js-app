@@ -13,9 +13,20 @@
 <body>
   <header class="page-header">
     <img src="./cover-pokemon.png" class="img-fluid" alt="logo for pokemon-app">
-
   </header>
+
   <div class="container">
+    <div class="row mt-3 mb-3 justify-content-center">
+      <div class="col-md-6">
+        <div class="input-group">
+          <input type="text" id="searchInput" class="form-control" placeholder="Search for a Pokemon...">
+          <div class="input-group-append">
+            <button class="btn btn-primary" id="searchButton">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="pokemon-container" class="row mt-5 mb-5 justify-content-center p-3" style="padding-bottom: 100px;  display: block;">
       <div class="user-cards" data-user-cards-container=""></div>
       <ul class="pokemon-list row list-unstyled p-4" style="padding-bottom: 30px;"></ul>
@@ -32,21 +43,30 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-        </div>
+        <div class="modal-body"></div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="js/promise-polyfill.js"></script>
   <script src="js/fetch-polyfill.js"></script>
   <script src="./dist/scripts.min.js"></script>
+  <script>
+    document.getElementById('searchButton').addEventListener('click', function () {
+      // Get the value from the search input
+      var searchTerm = document.getElementById('searchInput').value.toLowerCase();
 
+      // Your search logic goes here
+
+      console.log('Search Term:', searchTerm);
+    });
+  </script>
 </body>
 
 </html>
