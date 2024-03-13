@@ -11,5 +11,4 @@ Lastly, the `showDetails()` method showcases the details of a selected Pokémon 
 In essence, this JavaScript code employs various web technologies, including HTML, JS, jQuery, CSS, and Bootstrap components, to construct an engaging and dynamic web application, enabling users to explore and view details for different Pokémon.
 The application utilizes HTML, JS, jQuery, CSS, and relies on Bootstrap components.
 
-![preview](https://github.com/VadymMakohon/simple-js-app/assets/138728243/91eb6338-0265-4bfe-b8f9-9dd81f676feb)
-
+![preview](https://github.com/VadymMakohon/simple-js-app/assets/138728243/9e61c43b-68aa-4701-86c1-330713fb9dce)
