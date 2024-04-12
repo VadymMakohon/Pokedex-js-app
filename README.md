@@ -1,4 +1,4 @@
-# simple-js-app
+# Pokedex-js-app
 
 # https://vadymmakohon.github.io/simple-js-app/
 
