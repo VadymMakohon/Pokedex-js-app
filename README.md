@@ -12,3 +12,6 @@ In essence, this JavaScript code employs various web technologies, including HTM
 The application utilizes HTML, JS, jQuery, CSS, and relies on Bootstrap components.
 
 ![preview](https://github.com/VadymMakohon/simple-js-app/assets/138728243/9e61c43b-68aa-4701-86c1-330713fb9dce)
+
+# Contributors
+- [Vadym Makohon](https://github.com/VadymMakohon)
