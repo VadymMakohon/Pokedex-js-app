@@ -6,7 +6,7 @@
 # Project description
 
 
-The application loads an initial list of 929 Pokémons via an API and displays the items in a grid layout. The user is able to click on each grid item in order to display a detailed modal of the item. The details include the name, the image, the height and the different types of the respective item. Furthermore, the application allows to search for Pokémons via a search field. 
+The application loads an initial list of Pokémons via an API and displays the items in a grid layout. The user is able to click on each grid item in order to display a detailed modal of the item. The details include the name, the image, the height and the different types of the respective item. Furthermore, the application allows to search for Pokémons via a search field. 
 
 
 ## Usage
