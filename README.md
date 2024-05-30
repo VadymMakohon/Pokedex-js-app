@@ -2,14 +2,33 @@
 
 # https://vadymmakohon.github.io/Pokedex-js-app/
 
-The provided code constitutes a JavaScript program designed for the development of a web application known as a Pokédex. This application leverages an API (as indicated below) to retrieve a comprehensive list of Pokémon along with their details, subsequently presenting them on a designated web page. The script establishes an Immediately Invoked Function Expression (IIFE) named `pokemonRepository()`, encapsulating the Pokémon list and offering methods for adding new Pokémon, retrieving the entire list, and fetching Pokémon details from the API.
 
-Within the code, the `addListItem()` method dynamically generates a Pokémon list on the web page, creating a button for each Pokémon to facilitate the display of additional details. The `loadList()` method is responsible for fetching the Pokémon list from the API, while the `loadDetails()` method retrieves supplementary information for each Pokémon, such as its image, height, and type.
+# Project description
 
-Lastly, the `showDetails()` method showcases the details of a selected Pokémon in a modal, a component from the Bootstrap framework, triggered by clicking the respective button. This modal encompasses crucial Pokémon information, including the image, name, height, and type.
 
-In essence, this JavaScript code employs various web technologies, including HTML, JS, jQuery, CSS, and Bootstrap components, to construct an engaging and dynamic web application, enabling users to explore and view details for different Pokémon.
-The application utilizes HTML, JS, jQuery, CSS, and relies on Bootstrap components.
+The application loads an initial list of 929 Pokémons via an API and displays the items in a grid layout. The user is able to click on each grid item in order to display a detailed modal of the item. The details include the name, the image, the height and the different types of the respective item. Furthermore, the application allows to search for Pokémons via a search field. 
+
+
+## Usage
+
+
+Click on a pokemon name to show details (name, height and types) of the pokemon as a modal. The modal can be closed by clicking outside the modal, clicking ESC on the keyboard or by clicking on the "close" button.
+You can browse through the list within the modal by clicking on the respective "previous" or "next" arrows. 
+You can use the search field to search for a certain Pokémon. Upon typing the desired Pokémons name in the search field a list of search results is displayed under the input field with all matching Pokémons and the search sequence. The typed search sequence is highlighted bold and is underlined. The search sequence must not start at the beginning of the searched Pokémon.
+
+## Technical
+
+
+In order to get the data for the application the API "https://pokeapi.co/" was used.
+The modal and the styling for the navigation bar were introduced by applying bootstrap ("https://getbootstrap.com/docs/5.2/getting-started/introduction/")
+The assets were generated via Midjournay: https://www.midjourney.com/app/ 
+
+Following languages were used:
+
+- HTML
+- CSS
+- JavaScript
+
 
 ![preview](https://github.com/VadymMakohon/simple-js-app/assets/138728243/9e61c43b-68aa-4701-86c1-330713fb9dce)
 
